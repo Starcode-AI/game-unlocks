@@ -1,0 +1,1 @@
+window.Theme={init(){this.set(localStorage.getItem("theme")||"dark")},set(t){document.documentElement.dataset.theme=t;localStorage.setItem("theme",t);document.getElementById("themeIcon").src=t==="dark"?"assets/svg/sun.svg":"assets/svg/moon.svg"},toggle(){this.set(document.documentElement.dataset.theme==="dark"?"light":"dark")}};

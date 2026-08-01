@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#080d18">
-  <title>Starcode Download Center</title>
+  <title data-i18n="pageTitle">Starcode Download Center</title>
   <link rel="icon" href="assets/svg/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/theme.css">
@@ -18,26 +18,26 @@
   <header>
     <a class="brand" href="./">
       <img src="assets/svg/logo.svg" alt="Logo">
-      <div><strong>Starcode Downloads</strong><span>ZIP & 7Z Center</span></div>
+      <div><strong data-i18n="brandTitle">Starcode Downloads</strong><span data-i18n="brandSubtitle">ZIP & 7Z Center</span></div>
     </a>
-    <button id="themeBtn" class="icon-btn" title="Design wechseln">
+    <button id="themeBtn" class="icon-btn" title="Design wechseln" data-i18n-title="themeButton">
       <img id="themeIcon" src="assets/svg/sun.svg" alt="">
     </button>
   </header>
 
   <main>
     <section class="hero">
-      <div class="tag"><img src="assets/svg/spark.svg" alt=""> SCHNELLE DOWNLOADS</div>
-      <h1>Dateien finden.<br><em>Ohne Endung.</em></h1>
-      <p>Gib nur den Namen ein, zum Beispiel <b>MeinProgramm</b>. Es wird automatisch nach <code>.zip</code> und <code>.7z</code> gesucht.</p>
+      <div class="tag"><img src="assets/svg/spark.svg" alt=""> <span data-i18n="tag">SCHNELLE DOWNLOADS</span></div>
+      <h1><span data-i18n="heroTitle">Dateien finden.</span><br><em data-i18n="heroAccent">Ohne Endung.</em></h1>
+      <p><span data-i18n="heroTextBefore">Gib nur den Namen ein, zum Beispiel</span> <b>MeinProgramm</b>. <span data-i18n="heroTextAfter">Es wird automatisch nach</span> <code>.zip</code> <span data-i18n="and">und</span> <code>.7z</code> <span data-i18n="searched">gesucht.</span></p>
 
       <form id="searchForm">
         <div class="input-wrap">
           <img src="assets/svg/search.svg" alt="">
-          <input id="fileInput" placeholder="Dateiname eingeben" autocomplete="off" required>
+          <input id="fileInput" placeholder="Dateiname eingeben" data-i18n-placeholder="searchPlaceholder" autocomplete="off" required>
           <button id="clearBtn" type="button" class="clear hidden">×</button>
         </div>
-        <button class="search-btn" type="submit"><img src="assets/svg/search.svg" alt="">Suchen</button>
+        <button class="search-btn" type="submit"><img src="assets/svg/search.svg" alt=""><span data-i18n="searchButton">Suchen</span></button>
       </form>
     </section>
 
@@ -46,15 +46,15 @@
     <div class="content">
       <section class="panel">
         <div class="panel-head">
-          <div><small>DATEIEN</small><h2>Verfügbare Downloads</h2></div>
-          <button id="refreshBtn" class="small-btn"><img src="assets/svg/refresh.svg" alt="">Aktualisieren</button>
+          <div><small data-i18n="filesLabel">DATEIEN</small><h2 data-i18n="availableDownloads">Verfügbare Downloads</h2></div>
+          <button id="refreshBtn" class="small-btn"><img src="assets/svg/refresh.svg" alt=""><span data-i18n="refresh">Aktualisieren</span></button>
         </div>
         <div id="files" class="file-list"></div>
       </section>
 
       <aside class="panel">
         <div class="panel-head">
-          <div><small>VERLAUF</small><h2>Letzte Suchen</h2></div>
+          <div><small data-i18n="historyLabel">VERLAUF</small><h2 data-i18n="recentSearches">Letzte Suchen</h2></div>
           <button id="clearHistoryBtn" class="icon-btn"><img src="assets/svg/trash.svg" alt=""></button>
         </div>
         <div id="history" class="history"></div>
@@ -62,9 +62,10 @@
     </div>
   </main>
 
-  <footer>© 2026 HackerIP54 Community · GitHub Pages</footer>
+  <footer><span data-i18n="footer">© 2026 HackerIP54 Community · GitHub Pages</span></footer>
 
   <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/utils.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/history.js"></script>

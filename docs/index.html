@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <title>Starcode Download Center</title>
+  <link rel="icon" href="assets/svg/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <header>
+    <a class="brand" href="./">
+      <img src="assets/svg/logo.svg" alt="Logo">
+      <div><strong>Starcode Downloads</strong><span>ZIP & 7Z Center</span></div>
+    </a>
+    <button id="themeBtn" class="icon-btn" title="Design wechseln">
+      <img id="themeIcon" src="assets/svg/sun.svg" alt="">
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag"><img src="assets/svg/spark.svg" alt=""> SCHNELLE DOWNLOADS</div>
+      <h1>Dateien finden.<br><em>Ohne Endung.</em></h1>
+      <p>Gib nur den Namen ein, zum Beispiel <b>MeinProgramm</b>. Es wird automatisch nach <code>.zip</code> und <code>.7z</code> gesucht.</p>
+
+      <form id="searchForm">
+        <div class="input-wrap">
+          <img src="assets/svg/search.svg" alt="">
+          <input id="fileInput" placeholder="Dateiname eingeben" autocomplete="off" required>
+          <button id="clearBtn" type="button" class="clear hidden">×</button>
+        </div>
+        <button class="search-btn" type="submit"><img src="assets/svg/search.svg" alt="">Suchen</button>
+      </form>
+    </section>
+
+    <section id="result" class="result hidden"></section>
+
+    <div class="content">
+      <section class="panel">
+        <div class="panel-head">
+          <div><small>DATEIEN</small><h2>Verfügbare Downloads</h2></div>
+          <button id="refreshBtn" class="small-btn"><img src="assets/svg/refresh.svg" alt="">Aktualisieren</button>
+        </div>
+        <div id="files" class="file-list"></div>
+      </section>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <div><small>VERLAUF</small><h2>Letzte Suchen</h2></div>
+          <button id="clearHistoryBtn" class="icon-btn"><img src="assets/svg/trash.svg" alt=""></button>
+        </div>
+        <div id="history" class="history"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>© 2026 HackerIP54 Community · GitHub Pages</footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/history.js"></script>
+  <script src="assets/js/files.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
